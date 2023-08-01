@@ -21,6 +21,7 @@ const upload = multer({storage:storageProducts});
 router.get('/listar', controller.listar);
 router.get('/detalle', controller.detalle);
 router.post('/crear',upload.single('image'), controller.crear);
+router.put('/actualizar/:id', controller.update);
 
 
 
